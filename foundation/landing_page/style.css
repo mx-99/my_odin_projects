@@ -1,0 +1,151 @@
+/* this is some magical font-importing.  
+you'll learn about it later. */
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.header{
+    background-color: #101624;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5em;
+    padding: 5px;
+    gap: 60em;
+}
+.logo p{
+    font-size: 24px;
+    color: #f9f1f8;
+    font-weight: bold;
+}
+ul{
+    display: flex;
+}
+li{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 5px;
+    font-size: 18px;
+}
+.hero{
+    display: flex;
+    color: white;
+    background-color: #000000;;
+}
+.awesome{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20em;
+}
+.text{
+    margin: 5px;
+    padding: 5px;
+}
+.text  h1{
+    font-size: 48px;
+    font-weight: bolder;
+}
+.text p{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px;
+}
+.awesome img{
+    height: 23em;
+    width: 45em;
+    border-radius: 1em;
+    margin: 1em;
+    padding: .5em;
+}
+button{
+    background-color: #2972e9;
+    color: antiquewhite;
+    font-size: large;
+    border-color: white;
+    cursor: pointer;
+    font-weight: 100%;
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+}
+.cont {
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+  } 
+.info img{
+    width: 21em;
+    height: 23em;
+    border-radius: 5%;
+}
+.title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1f2937;
+    margin: 5px;
+    padding: 5px;
+}
+.quote{
+    height: 9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e7eb;
+    font-size: 36px;
+    font-weight: lighter;
+    font-style: italic;
+}
+.or{
+    display: flex;
+    justify-content: flex-end;
+}
+.call{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13em;
+}
+.to{
+    width: 50em;
+    height: 8em;
+    background-color: #3882f9;
+    color: white;
+    border-radius: 1em;
+}
+.action{
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em auto;
+}
+.action p{
+    font-weight: bold;
+    font-size: large;
+}
+.footer{
+    height: 3em;
+    background-color: #101624;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
