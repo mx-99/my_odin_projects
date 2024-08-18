@@ -34,5 +34,30 @@ function randomColor() {
     const b = Math.floor(Math.random() * 256);
     return `rgb(${r}, ${g}, ${b})`;
 }
+
+
+addGridButton.addEventListener('click',()=>{
+    userGridX = parseInt(prompt("Enter X axis grids"));
+    userGridY = parseInt(prompt("Enter Y axis grids"));
+    if (isNaN(userGridX) || isNaN(userGridY) || userGridX <= 0 || userGridY <= 0) {
+        alert("Please enter valid positive numbers for grid dimensions.");
+        return;
+    }    
+    if (userGridX > 100 || userGridY > 100) {
+        alert("grid numbers should not exceed 100");
+        return;
+    }
+    resetGrid();
+
+    createGrid(userGridX, userGridY);
+});
+
+resetButton.addEventListener('click', ()=>{
+    resetGrid()
+});
+
+function resetGrid(){
+    container.innerHTML = "";
+}
   
 createGrid(DEFAULT_GRID_X, DEFAULT_GRID_Y);
