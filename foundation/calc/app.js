@@ -96,3 +96,24 @@ function handleClearClick() {
 const updateDisplay = value => {
     input.value = typeof value === 'number' ? Number(value.toFixed(10)) : value;
 };
+
+function keyboardHandler(event) {
+    let key = event.key;
+    if ("123456789.".includes(key)) {
+        event.preventDefault();
+        secondNumber += key;
+        updateDisplay(secondNumber);
+    } else if ("+-*/".includes(key)) {
+        handleOperatorClick({ currentTarget: { value: key } });
+    } else if (key === "Enter") {
+        event.preventDefault();
+        handleEqualClick();
+    } else if (key === 'Backspace') {
+        event.preventDefault();
+        input.value = input.value.slice(0, -1);
+    } else {
+        event.preventDefault();
+    }
+}
+
+input.focus();
