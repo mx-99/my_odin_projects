@@ -29,3 +29,27 @@ sumButton.addEventListener('click', () => {
     let numberArray = inputValue.split('').map(Number);
     sum(numberArray);
 });
+
+// Math functions
+const add = (a, b) => Number(a) + Number(b);
+const subtract = (a, b) => Number(a) - Number(b);
+const multiply = (a, b) => Number(a) * Number(b);
+
+function divide(a, b) {
+    if (Number(b) === 0) return "Error"; 
+    return Number(a) / Number(b);
+}
+
+const sum = function(array) {
+    let summed = array.reduce((total, current) => total + current, 0);
+    updateDisplay(summed); 
+    return summed;
+};
+
+function operate(op, number1, number2) {
+    if (op === '+') return add(number1, number2);
+    if (op === '-') return subtract(number1, number2);
+    if (op === '*') return multiply(number1, number2);
+    if (op === '/') return divide(number1, number2);
+    return null;  
+}
