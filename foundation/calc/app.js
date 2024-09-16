@@ -53,3 +53,46 @@ function operate(op, number1, number2) {
     if (op === '/') return divide(number1, number2);
     return null;  
 }
+
+function handleButtonClick(event) { 
+    let clickedButton = event.currentTarget;
+    secondNumber += clickedButton.value;
+    updateDisplay(secondNumber);
+}
+
+function handleOperatorClick(event) {
+    const clickedOp = event.currentTarget;
+    let opValue = clickedOp.value;  
+
+    if (operator !== null && secondNumber !== '') {
+        firstNumber = operate(operator, firstNumber, secondNumber);
+        updateDisplay(firstNumber);
+        secondNumber = '';
+    }
+
+    operator = opValue;     
+    firstNumber = Number(input.value);
+    secondNumber = '';
+}
+
+function handleEqualClick() {
+    if (operator === undefined || secondNumber === '') return;
+    if (operator !== null && secondNumber !== '') {
+        let result = operate(operator, firstNumber, secondNumber);
+        updateDisplay(result);
+        firstNumber = result;
+        secondNumber = '';
+        operator = null;
+    }
+}
+
+function handleClearClick() {
+    input.value = '';
+    firstNumber = null;
+    operator = null;
+    secondNumber = '';
+}
+
+const updateDisplay = value => {
+    input.value = typeof value === 'number' ? Number(value.toFixed(10)) : value;
+};
