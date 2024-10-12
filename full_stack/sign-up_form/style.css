@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+@font-face {
+    font-family: 'Kaushan Script';
+    src: url('fonts/KaushanScript-Regular.otf')  
+}
+
+body{
+    display: flex;
+}
+.background-container {
+    position: relative;
+    height: 100vh;
+    width: 30%;
+    left: -2.5%;
+    right: 6%;
+    background-image: url('assets/halie-west-25xggax4bSA-unsplash.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+.logo {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 19%;
+    display: flex;
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.7);    
+}
+
+.imglogo {
+    position: relative; 
+    width: 100%; 
+    height: auto; 
+    left: 30%;
+}
+
+.logo-text {
+    font-family: 'Kaushan Script';
+    position: absolute; 
+    top: 53%; 
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white; 
+}
+.credit{
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 5px;
+    width: 100%;
+}
+fieldset{
+    position: relative;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), -5px -5px 15px rgba(255, 255, 255, 0.5);
+    border: none; 
+    width: 70em;
+    padding: 5px;  
+    right: 55px;
+    margin: 5px;
+    top: 35px;
+}
+
+  
+.name-container,
+.contact-container,
+.password-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-field, .contact-field, .password-field {
+    flex: 1;
+    margin: 10px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input {
+    width: 70%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+button{
+    position: relative;
+    top: 50px;
+    background-color:  #596D48;
+    width: 15%;
+    height: 45px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.last{
+    position: relative;
+    top: 50px;
+    left:13px;
+}
+.nonse-info>h4{
+    position: relative;
+    top: 40px;
+}
+.form-container{
+    position: relative;
+    top: 250px;
+}
+.nonse-info{
+    position: relative;
+    bottom: 70px;
+    margin: 5px;
+    font-size: larger;
+    font-weight: bolder;
+    
+}
+input:focus {
+    border: 1px solid blue; 
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); 
+}
+
+input[type="password"]:invalid {
+    border-color: red;
+}
+
+input + span {
+    position: relative;
+  }
+  
+input:required + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    top: -29px;
+    left: -70px;
+    border-radius: 10px;
+}
+.error{
+    color: red;
+}
