@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+
+</head>
+<body>
+    <div class="background-container">
+        <p class="credit">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
+        <div class="logo">
+            <div class="imglogo">
+                <img src="assets/odin-lined.png" alt="odin logo" height="170px">
+                <h1 class="logo-text">ODIN</h1>
+            </div>
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="nonse-info">
+            <p>This is not a real online service! You know you need something</p>
+            <p>like this in your life to help you realize your deepest dreams.</p>
+            <p>Sign up now to get started.</p>
+            <h4>You know you want to</h4>
+            </div>
+
+        
+        <form novalidate>
+            <fieldset>                
+                <h4>Let's do this!</h4>
+                <div class="name-container">
+                    <div class="name-field">
+                        <label for="fname">FIRST NAME</label>
+                        <input type="text" id="fname" name="first_name" required>
+                          <span></span>
+                    </div>
+                    <div class="name-field">
+                        <label for="lname">LAST NAME</label>
+                        <input type="text" id="lname" name="last_name" required>
+                        <span></span>
+                    </div>
+                </div>
+        
+                <div class="contact-container">
+                    <div class="contact-field">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" required>
+                        <span></span>
+                    </div>
+                    <div class="contact-field">
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="tel" id="phone" name="phone_number" required>
+                        <span></span>
+                    </div>
+                </div>
+        
+                <div class="password-container">
+                    <div class="password-field">
+                        <label for="passw">PASSWORD</label>
+                        <input type="password" id="passw" name="password" required>
+                        <span></span>
+                    </div>
+                    <div class="password-field">
+                        <label for="confirm_passw">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm_passw" name="confirm_passw" required>
+                        <span></span>
+                        <p class="error"></p>
+                    </div>
+                </div>
+            </fieldset>
+                <button type="submit" class="btn">Create Account</button>
+                <p class="last">Already have an account? <a href="#">Log in</a></p>
+        </form>
+        </div>
+
+ 
+</body>
+</html>
