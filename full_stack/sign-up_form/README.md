@@ -46,5 +46,6 @@ Building this sign-up form taught me
 ## Acknowledgments
 
 - Background image by [Halie West](https://unsplash.com/@haliewestphoto) on Unsplash.
----
+- Font by:: 
+  - Kaushan Script, Copyright (c) 2011, Pablo Impallari and Igino Marini, licensed under the [SIL Open Font License, Version 1.1](http://scripts.sil.org/OFL).
 
