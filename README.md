@@ -17,3 +17,4 @@ Full stack
 | Project | Topic | Code | Live Preview | My Experience |
 | --- | --- | --- | --- | --- |
 |sign-up form|html, css and js|https://github.com/mx-99/my_odin_projects/tree/main/full_stack/sign-up_form|https://mx-99.github.io/my_odin_projects/full_stack/sign-up_form|https://github.com/mx-99/my_odin_projects/tree/main/full_stack/sign-up_form#my-experience|
+|Admin Dashboard |Html and css|https://github.com/mx-99/my_odin_projects/tree/main/full_stack/admin_dashboard|https://mx-99.github.io/my_odin_projects/full_stack/admin_dashboard/|https://github.com/mx-99/my_odin_projects/tree/main/full_stack/admin_dashboard#what-i-learned|
