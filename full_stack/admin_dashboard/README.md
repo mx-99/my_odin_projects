@@ -23,7 +23,6 @@ You can view the live demo of the dashboard here: [Admin Dashboard Live Preview]
 Building this project taught me several key concepts:
 
 - **CSS Flexbox and Grid**: I gained practical experience using Flexbox and CSS Grid for efficient layout management.
-- **User Interface Design**: I explored design principles to create an intuitive and visually appealing user interface.
 
 ## File Structure
 
