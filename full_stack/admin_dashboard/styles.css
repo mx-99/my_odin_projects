@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template: auto 4fr/ 1fr 4fr;
+    background-color: #e5e5e5;
+    gap: 16px;
+}
+
