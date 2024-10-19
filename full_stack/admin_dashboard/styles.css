@@ -21,3 +21,94 @@ body {
     gap: 16px;
 }
 
+.header {
+    grid-column: 2;
+    display: grid;
+    background-color: #fff;
+    padding: 16px;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.top-header1 {
+    display: flex;
+    align-items: center;
+}
+
+.top-header1 input {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 12px;
+    margin-left: 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.header-img {
+    height: 2.5em;
+}
+
+.bottom-header-img {
+    margin-left: 30px;
+}
+
+.bottom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hi {
+    display: flex;
+    align-items: center;
+}
+
+.hi p {
+    margin-left: 1px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu button {
+    cursor: pointer;
+    color: white;
+    background-color: #3151b9;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.menu button:hover {
+    background-color: #2748a1;
+}
+
+.menu button:active {
+    transform: scale(0.95);
+}
+
+input {
+    width: 50em;
+    border-radius: 20px;
+    height: 30px;
+}
+
