@@ -158,3 +158,120 @@ input {
     background-color: #34577a;
 }
 
+.centre {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    font-family: 'Dancing Script', cursive, 'Comic Sans MS', sans-serif;
+
+}
+
+.cards {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.icons ul {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+    margin: 5px;
+}
+
+.icons img {
+    height: 48px;
+}
+
+.cards {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    height: 240px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 6px rgb(255, 217, 2) solid;
+
+}
+
+.card p {
+    padding: 5px;
+}
+
+.cards-title {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    margin: 10px;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.anoun_tren {
+    display: grid;
+    grid-column: auto;
+    grid-template-rows: 50px;
+    gap: 1em;
+}
+
+.anoun-title {
+    font-size: 1rem;
+    font-weight: bold;
+    align-self: center;
+    margin-left: 5;
+}
+
+.announcement-content {
+    background-color: white;
+    width: 300px;
+    border-radius: 8px;
+
+}
+
+.Announcement {
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px rgb(0, 0, 0) solid;
+}
+
+h6 {
+    font-size: large;
+}
+
+.tren-title {
+    font-size: 1rem;
+    font-weight: bold;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+
+}
+
+.users>div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
