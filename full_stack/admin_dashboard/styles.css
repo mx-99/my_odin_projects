@@ -112,3 +112,49 @@ input {
     height: 30px;
 }
 
+.sidebar {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgb(32, 127, 228);
+    color: white;
+    font-family: 'Merriweather', Georgia, Times, serif;
+
+}
+
+.sidebar h3 {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.sidebar ul li img {
+    margin-right: 10px;
+}
+
+.sidebar p {
+    font-weight: bold;
+    font-size: large;
+
+}
+
+.lower-sidebar {
+    margin-top: 60px;
+}
+
+.upper-sidebar li:hover,
+.lower-sidebar li:hover {
+    background-color: #34577a;
+}
+
