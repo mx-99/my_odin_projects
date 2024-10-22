@@ -11,3 +11,11 @@ function book(title, author, pages, read) {
     }
 }
 
+function addBookToLibrary() {
+    let title = prompt("enter title")
+    let author = prompt("enter author")
+     let pages = prompt("enter how many pages ")
+     let read = prompt("did you read this book 'yes or no'")
+     let newBook = new book(title, author, pages, read)
+     myLibrary.push(newBook)
+ }
