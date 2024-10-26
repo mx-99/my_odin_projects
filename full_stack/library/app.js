@@ -29,7 +29,7 @@ function displayBooks() {
         const book_cards = document.createElement('div')
         book_cards.className = 'cards'
         book_cards.innerHTML = `
-        <h3>${obj.title} by ${obj.author}</h3>
+        <h3>${obj.title} <br> By: ${obj.author}</h3>
         <p>${obj.pages} pages ${obj.read ? "Read" : "Not Read"}</p>
         <button data-index="${index}" class="toggle-read">Read Status </button>
         <button data-index="${index}" class="remove-book">Remove </button>`;
