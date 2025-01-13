@@ -28,6 +28,38 @@ function createLinkedList(){
         size++
     }
 
+    function append(value){
+        const node = createNode(value);
+        if(isEmpty()){
+            head = node;
+        }else{
+            let prev = head;
+            while(prev.next){
+                prev = prev.next
+            }
+            prev.next = node;
+        }
+        size++
+    }
+
+    function insert(value, index){
+        if(index < 0 || index > size){
+            console.log(`Error: Index ${index} is out of bounds.`);
+            return;
+        }
+        if(index === 0){
+            prepend(value)
+        }else{
+            const node = createNode(value)
+            let prev = head;
+            for(let i = 0; i<index-1; i++){
+                prev = prev.next;
+            }
+            node.next = prev.next;
+            prev.next = node
+            size++
+        }
+    }
 
     function print(){
         if(isEmpty()){
@@ -47,5 +79,7 @@ function createLinkedList(){
         getSize,
         prepend,
         print,
+        append,
+        insert,
     }
 }
