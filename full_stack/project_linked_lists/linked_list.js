@@ -17,9 +17,35 @@ function createLinkedList(){
         return size
     }
 
- 
+    function prepend(value){
+        const node = createNode(value);
+        if(isEmpty()){
+            head = node
+        }else{
+            node.next = head;
+            head = node
+        }
+        size++
+    }
+
+
+    function print(){
+        if(isEmpty()){
+            console.log("List is empty!");
+        }else{
+            let current = head;
+            let listValue = '';
+            while(current){
+                listValue += `(${current.value}) -> `;
+                current = current.next;
+            }
+            console.log(listValue)
+        }
+    }
     return {
         isEmpty,
         getSize,
+        prepend,
+        print,
     }
 }
