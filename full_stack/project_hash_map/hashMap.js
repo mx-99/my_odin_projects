@@ -65,6 +65,79 @@ class HashMap {
         return undefined;
     }
 
-  
+    has(key) {
+        const index = this.hash(key);
+        const bucket = this.table[index];
+
+        if (bucket) {
+            return bucket.some(item => item[0] === key);
+        }
+        return false;
+    }
+
+    remove(key) {
+        const index = this.hash(key);
+        const bucket = this.table[index];
+
+        if (bucket) {
+            const itemIndex = bucket.findIndex(item => item[0] === key);
+            if (itemIndex !== -1) {
+                bucket.splice(itemIndex, 1);
+                this.size--;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    length() {
+        return this.size;
+    }
+
+    clear() {
+        this.table = new Array(this.capacity);
+        this.size = 0;
+    }
+
+    keys() {
+        const keysArray = [];
+        for (let i = 0; i < this.table.length; i++) {
+            const bucket = this.table[i];
+            if (bucket) {
+                bucket.forEach(item => keysArray.push(item[0]));
+            }
+        }
+        return keysArray;
+    }
+
+    values() {
+        const valuesArray = [];
+        for (let i = 0; i < this.table.length; i++) {
+            const bucket = this.table[i];
+            if (bucket) {
+                bucket.forEach(item => valuesArray.push(item[1]));
+            }
+        }
+        return valuesArray;
+    }
+
+    entries() {
+        const entriesArray = [];
+        for (let i = 0; i < this.table.length; i++) {
+            const bucket = this.table[i];
+            if (bucket) {
+                bucket.forEach(item => entriesArray.push(item));
+            }
+        }
+        return entriesArray;
+    }
+
+    display() {
+        for (let i = 0; i < this.table.length; i++) {
+            if (this.table[i]) {
+                console.log(i, this.table[i]);
+            }
+        }
+    }
 }
 
