@@ -182,7 +182,69 @@ class Node {
     }
   }
   
-
+  const prettyPrint = (node, prefix = '', isLeft = true) => {
+    if (node === null) {
+      return;
+    }
+    if (node.right !== null) {
+      prettyPrint(node.right, `${prefix}${isLeft ? '│   ' : '    '}`, false);
+    }
+    console.log(`${prefix}${isLeft ? '└── ' : '┌── '}${node.value}`);
+    if (node.left !== null) {
+      prettyPrint(node.left, `${prefix}${isLeft ? '    ' : '│   '}`, true);
+    }
+  };
   
+  const randomArray = () => {
+    return Array.from({ length: 15 }, () => Math.floor(Math.random() * 100));
+  };
   
+  let bst = new BinarySearchTree();
+  let randomNumbers = randomArray();
+  console.log('Array:', randomNumbers);
+  
+  bst.buildTree(randomNumbers);
+  console.log('Tree built from random numbers:');
+  prettyPrint(bst.root);
+  
+  console.log('Is the tree balanced?', bst.isBalanced());
+  
+  console.log('Level Order:');
+  bst.levelOrder((node) => console.log(node.value));
+  
+  console.log('Pre Order:');
+  bst.preOrder(bst.root, (node) => console.log(node.value));
+  
+  console.log('Post Order:');
+  bst.postOrder(bst.root, (node) => console.log(node.value));
+  
+  console.log('In Order:');
+  bst.inOrder(bst.root, (node) => console.log(node.value));
+  
+  bst.insert(150);
+  bst.insert(200);
+  bst.insert(300);
+  bst.insert(400);
+  console.log('Tree after unbalancing:');
+  prettyPrint(bst.root);
+  
+  console.log('Is the tree balanced?', bst.isBalanced());
+  
+  bst.rebalance();
+  console.log('Tree after rebalancing:');
+  prettyPrint(bst.root);
+  
+  console.log('Is the tree balanced?', bst.isBalanced());
+  
+  console.log('Level Order:');
+  bst.levelOrder((node) => console.log(node.value));
+  
+  console.log('Pre Order:');
+  bst.preOrder(bst.root, (node) => console.log(node.value));
+  
+  console.log('Post Order:');
+  bst.postOrder(bst.root, (node) => console.log(node.value));
+  
+  console.log('In Order:');
+  bst.inOrder(bst.root, (node) => console.log(node.value));
   
