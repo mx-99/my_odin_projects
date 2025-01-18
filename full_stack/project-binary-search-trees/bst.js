@@ -140,7 +140,46 @@ class Node {
       return current === node ? depth : -1;
     }
   
-    
+    isBalanced() {
+      const checkBalance = (node) => {
+        if (!node) return { isBalanced: true, height: -1 };
+  
+        const left = checkBalance(node.left);
+        const right = checkBalance(node.right);
+  
+        const isBalanced =
+          left.isBalanced && right.isBalanced && Math.abs(left.height - right.height) <= 1;
+        const height = 1 + Math.max(left.height, right.height);
+  
+        return { isBalanced, height };
+      };
+  
+      return checkBalance(this.root).isBalanced;
+    }
+  
+    rebalance() {
+      const nodes = [];
+      const inOrderTraversal = (node) => {
+        if (node) {
+          inOrderTraversal(node.left);
+          nodes.push(node.value);
+          inOrderTraversal(node.right);
+        }
+      };
+  
+      inOrderTraversal(this.root);
+      this.buildTree(nodes);
+    }
+  
+    min(root) {
+      if (!root.left) return root.value;
+      return this.min(root.left);
+    }
+  
+    max(root) {
+      if (!root.right) return root.value;
+      return this.max(root.right);
+    }
   }
   
 
