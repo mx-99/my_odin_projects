@@ -83,7 +83,64 @@ class Node {
         : this.search(root.right, value);
     }
   
-   
+    preOrder(root, callback) {
+      if (root) {
+        callback(root);
+        this.preOrder(root.left, callback);
+        this.preOrder(root.right, callback);
+      }
+    }
+  
+    inOrder(root, callback) {
+      if (root) {
+        this.inOrder(root.left, callback);
+        callback(root);
+        this.inOrder(root.right, callback);
+      }
+    }
+  
+    postOrder(root, callback) {
+      if (root) {
+        this.postOrder(root.left, callback);
+        this.postOrder(root.right, callback);
+        callback(root);
+      }
+    }
+  
+    levelOrder(callback) {
+      if (typeof callback !== 'function') throw new Error('Callback is required');
+  
+      const queue = [this.root];
+      while (queue.length) {
+        let current = queue.shift();
+        callback(current);
+        if (current.left) queue.push(current.left);
+        if (current.right) queue.push(current.right);
+      }
+    }
+  
+    height(node) {
+      if (!node) return -1;
+      return 1 + Math.max(this.height(node.left), this.height(node.right));
+    }
+  
+    depth(node) {
+      let current = this.root;
+      let depth = 0;
+  
+      while (current && current !== node) {
+        if (node.value < current.value) {
+          current = current.left;
+        } else {
+          current = current.right;
+        }
+        depth++;
+      }
+  
+      return current === node ? depth : -1;
+    }
+  
+    
   }
   
 
